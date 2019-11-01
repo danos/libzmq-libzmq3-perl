@@ -1,0 +1,32 @@
+Source: libzmq-libzmq3-perl
+Section: perl
+Priority: optional
+Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
+Build-Depends: debhelper (>= 9), perl,
+ libanyevent-perl,
+ libdevel-checklib-perl,
+ libtask-weaken-perl,
+ libtest-fatal-perl,
+ libtest-requires-perl,
+ libtest-tcp-perl (>= 1.08),
+ libzmq-constants-perl (>= 1.04),
+ libzmq3-dev | libzmq5-dev,
+ libmodule-install-readmefrompod-perl,
+ perl (>= 5.10.0-12) | libextutils-parsexs-perl (>= 2.2.1),
+ perl (>= 5.13.11) | libtest-simple-perl (>= 0.98)
+Standards-Version: 3.9.8
+Homepage: https://metacpan.org/release/ZMQ-LibZMQ3
+
+Package: libzmq-libzmq3-perl
+Architecture: any
+Depends: ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends},
+ libtask-weaken-perl, libzmq-constants-perl (>= 1.04)
+Description: Perl bindings to the libzmq 3.x library
+ ØMQ is a library which extends the standard socket interfaces with features
+ traditionally provided by specialised messaging middleware products.
+ .
+ ØMQ sockets provide an abstraction of asynchronous message queues, multiple
+ messaging patterns, message filtering (subscriptions), seamless access to
+ multiple transport protocols and more.
+ .
+ ZMQ::LibZMQ3 is a thin Perl wrapper around the libzmq 3.x C API.
